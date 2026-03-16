@@ -2,7 +2,7 @@
 
 A full-stack MERN productivity platform with task management, notes, multi-factor authentication, and an AI-powered plagiarism checker.
 
-> **Live Demo:** [Coming Soon](#) *(link will be updated upon deployment)*
+> **Live Demo:** [https://organest-gilt.vercel.app/](https://organest-gilt.vercel.app/)
 
 ---
 
