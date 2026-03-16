@@ -1,6 +1,9 @@
 import fs, { readFileSync } from "fs";
+import { createRequire } from "module";
 import mammoth from "mammoth";
-import pdfParse from "pdf-parse";
+
+const require = createRequire(import.meta.url);
+const pdfParse = require("pdf-parse");
 
 async function extractTextFromFile(filePath) {
   const fileExtension = filePath.split(".").pop().toLowerCase();
