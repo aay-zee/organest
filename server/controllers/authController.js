@@ -37,7 +37,7 @@ export const signup = async (req, res) => {
     await user.save();
     try {
       const base64 = (qrCodeDataURL || "").split(",")[1];
-      await sendMail(
+      sendMail(
         user.email,
         "Welcome to Notes Manager 🎉",
         "Thanks for signing up! Your account is now active. Scan the attached QR code in Google Authenticator.",
@@ -136,7 +136,7 @@ export const login = async (req, res) => {
     );
 
     try {
-      await sendMail(
+      sendMail(
         user.email,
         "New Login Detected ✅",
         `Hi ${

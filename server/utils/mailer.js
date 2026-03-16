@@ -23,13 +23,6 @@ export const sendMail = async (
     auth: { user, pass },
   });
 
-  // Optionally verify connection on startup of each send (useful during dev)
-  try {
-    await transporter.verify();
-  } catch (e) {
-    console.error("Email transport verify failed:", e?.message || e);
-  }
-
   await transporter.sendMail({
     from: `"Notes Manager" <${user}>`,
     to,
